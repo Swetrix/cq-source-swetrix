@@ -22,3 +22,5 @@ dist
 *.log
 
 .vscode
+
+config.yml
