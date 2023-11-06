@@ -12,6 +12,8 @@ type Spec struct {
 	From     string `json:"from"`
 	To       string `json:"to"`
 	Timezone string `json:"timezone"`
+
+	Concurrency int `json:"concurrency"`
 }
 
 func (spec *Spec) Validate() error {

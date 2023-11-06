@@ -1,7 +1,5 @@
 # Table: swetrix_performance
 
-This table shows data for Swetrix Performance.
-
 The primary key for this table is **_cq_id**.
 
 ## Columns

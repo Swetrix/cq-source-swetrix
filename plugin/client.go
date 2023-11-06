@@ -73,11 +73,14 @@ func Configure(_ context.Context, logger zerolog.Logger, specBytes []byte, opts 
 	}
 
 	return &Client{
-		options:   opts,
-		logger:    logger,
-		config:    config,
-		tables:    tables,
-		scheduler: scheduler.NewScheduler(scheduler.WithLogger(logger)),
+		options: opts,
+		logger:  logger,
+		config:  config,
+		tables:  tables,
+		scheduler: scheduler.NewScheduler(
+			scheduler.WithLogger(logger),
+			scheduler.WithConcurrency(config.Concurrency),
+		),
 	}, nil
 }
 
