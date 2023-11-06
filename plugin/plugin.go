@@ -16,13 +16,7 @@ func Plugin() *plugin.Plugin {
 		Name,
 		Version,
 		Configure,
-		// schema.Tables{
-		// 	resources.Log(),
-		// 	resources.Performance(),
-		// 	resources.LiveVisitors(),
-		// },
 		plugin.WithKind(Kind),
 		plugin.WithTeam(Team),
-		// client.New,
 	)
 }

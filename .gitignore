@@ -23,4 +23,6 @@ dist
 
 .vscode
 
+.idea
+.cq
 config.yml
