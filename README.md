@@ -32,6 +32,16 @@ make lint
 make gen-docs
 ```
 
+### Compile
+```bash
+make build
+```
+
+### Release
+```bash
+VERSION=1.0.0 make dist
+```
+
 ### Release a new version
 
 1. Run `git tag v1.0.0` to create a new tag for the release (replace `v1.0.0` with the new version number)

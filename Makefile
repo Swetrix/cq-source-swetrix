@@ -21,6 +21,10 @@ gen-docs:
 	cloudquery tables --format markdown --output-dir docs/ test/config.yml
 	mv -vf docs/swetrix docs/tables
 
+.PHONY: dist
+dist:
+	go run main.go package -m "Release ${VERSION}" ${VERSION} .
+
 # All gen targets
 .PHONY: gen
 gen: gen-docs
