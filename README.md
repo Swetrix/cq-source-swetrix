@@ -5,12 +5,12 @@ A Swetrix source plugin for CloudQuery that loads data from Swetrix to any datab
 ## Links
 
 - [CloudQuery Quickstart Guide](https://www.cloudquery.io/docs/quickstart)
-- [Configuration](docs/configuration.md)
+- [Configuration](docs/overview.md)
 - [Supported Tables](docs/tables/README.md)
 
 ## Authentication
 
-The Swetrix source plugin uses the [Swetrix API](https://docs.swetrix.com/statistics-api) to fetch data. You will need to create an API key in the Swetrix portal. See the [Configuration](docs/configuration.md) section for more information on running the Swetrix plugin.
+The Swetrix source plugin uses the [Swetrix API](https://docs.swetrix.com/statistics-api) to fetch data. You will need to create an API key in the Swetrix portal. See the [Configuration](docs/overview.md) section for more information on running the Swetrix plugin.
 
 ## Development
 

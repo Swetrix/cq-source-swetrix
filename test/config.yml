@@ -1,0 +1,20 @@
+kind: source
+spec:
+  name: "swetrix"
+  path: "./cq-source-swetrix"
+  registry: "local"
+  tables: ["*"]
+  version: "v1.0.0"
+  destinations:
+    - "test"
+  spec:
+    project_ids: [""]
+    api_key: ""
+    time_bucket: "day"
+    period: "4w"
+---
+kind: destination
+spec:
+  name: test
+  path: cloudquery/test
+  version: "v2.2.3" # latest version of test plugin

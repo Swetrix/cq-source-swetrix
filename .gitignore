@@ -25,4 +25,4 @@ dist
 
 .idea
 .cq
-config.yml
+sync.yml
