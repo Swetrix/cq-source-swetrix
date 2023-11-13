@@ -4,13 +4,14 @@
 
 The following example connects a single Swetrix project to a Postgres destination. The (top level) source spec section is described in the [Source Spec Reference](https://docs.cloudquery.io/docs/reference/source-spec). 
 
-```yaml
+```yaml copy
 kind: source
 spec:
   name: "swetrix"
   path: "swetrix/swetrix"
+  registry: "cloudquery"
   tables: ["*"]
-  version: "v1.0.0"
+  version: "v2.0.0"
   destinations:
     - "postgresql"
   spec:

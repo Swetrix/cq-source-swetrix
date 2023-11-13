@@ -17,6 +17,7 @@
 .DS_Store
 
 cq-source-swetrix
+cloudquery
 
 dist
 *.log
