@@ -1,12 +1,7 @@
 package client
 
 import (
-	"context"
-	"fmt"
-
-	"github.com/cloudquery/plugin-sdk/plugins/source"
 	"github.com/cloudquery/plugin-sdk/schema"
-	"github.com/cloudquery/plugin-sdk/specs"
 	"github.com/rs/zerolog"
 	"github.com/swetrix/cq-source-swetrix/rest"
 )
@@ -26,13 +21,7 @@ func (c *Client) ID() string {
 	return "swetrix"
 }
 
-func New(ctx context.Context, logger zerolog.Logger, s specs.Source, opts source.Options) (schema.ClientMeta, error) {
-	var pluginSpec Spec
-
-	if err := s.UnmarshalSpec(&pluginSpec); err != nil {
-		return nil, fmt.Errorf("failed to unmarshal plugin spec: %w", err)
-	}
-
+func New(logger zerolog.Logger, pluginSpec Spec) (schema.ClientMeta, error) {
 	if err := pluginSpec.Validate(); err != nil {
 		return nil, err
 	}

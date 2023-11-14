@@ -4,19 +4,20 @@
 
 The following example connects a single Swetrix project to a Postgres destination. The (top level) source spec section is described in the [Source Spec Reference](https://docs.cloudquery.io/docs/reference/source-spec). 
 
-```yaml
+```yaml copy
 kind: source
 spec:
   name: "swetrix"
   path: "swetrix/swetrix"
-  version: "v1.0.0"
+  registry: "cloudquery"
+  tables: ["*"]
+  version: "v2.0.0"
   destinations:
     - "postgresql"
   spec:
     project_ids: ["<YOUR_PROECT_ID>"]
     # Get the API key from 'SWETRIX_API_KEY' environment variable
     api_key: "${SWETRIX_API_KEY}"
-
     time_bucket: "day"
     period: "4w"
 ```
@@ -52,3 +53,7 @@ This is the (nested) spec used by the Swetrix source plugin.
 - `timezone` (string, optional)
 
   The timezone to use for the time range. The default is Etc/GMT. You can use any timezone supported by [day.js](https://day.js.org/docs/en/timezone/timezone/) library.
+
+- `concurrrency` (int, optional, default: `1000`)
+
+  Best effort maximum number of Go routines to use. Lower this number to reduce memory usage.

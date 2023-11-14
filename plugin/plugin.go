@@ -1,25 +1,22 @@
 package plugin
 
 import (
-	"github.com/cloudquery/plugin-sdk/plugins/source"
-	"github.com/cloudquery/plugin-sdk/schema"
-	"github.com/swetrix/cq-source-swetrix/client"
-	"github.com/swetrix/cq-source-swetrix/resources"
+	"github.com/cloudquery/plugin-sdk/v4/plugin"
 )
 
 var (
+	Kind    = "source"
+	Team    = "swetrix"
+	Name    = "swetrix"
 	Version = "development"
 )
 
-func Plugin() *source.Plugin {
-	return source.NewPlugin(
-		"swetrix",
+func Plugin() *plugin.Plugin {
+	return plugin.NewPlugin(
+		Name,
 		Version,
-		schema.Tables{
-			resources.Log(),
-			resources.Performance(),
-			resources.LiveVisitors(),
-		},
-		client.New,
+		Configure,
+		plugin.WithKind(Kind),
+		plugin.WithTeam(Team),
 	)
 }

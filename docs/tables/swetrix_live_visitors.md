@@ -1,14 +1,11 @@
 # Table: swetrix_live_visitors
 
-The primary key for this table is **project_id**.
+The primary key for this table is **_cq_id**.
 
 ## Columns
 
 | Name          | Type          |
 | ------------- | ------------- |
-|_cq_source_name|String|
-|_cq_sync_time|Timestamp|
-|_cq_id|UUID|
-|_cq_parent_id|UUID|
-|project_id (PK)|String|
-|live_visitors|JSON|
+|_cq_id (PK)|`uuid`|
+|_cq_parent_id|`uuid`|
+|live_visitors|`json`|

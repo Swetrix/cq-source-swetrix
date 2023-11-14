@@ -1,18 +1,15 @@
 # Table: swetrix_log
 
-The primary key for this table is **project_id**.
+The primary key for this table is **_cq_id**.
 
 ## Columns
 
 | Name          | Type          |
 | ------------- | ------------- |
-|_cq_source_name|String|
-|_cq_sync_time|Timestamp|
-|_cq_id|UUID|
-|_cq_parent_id|UUID|
-|project_id (PK)|String|
-|params|JSON|
-|chart|JSON|
-|avg_sdur|Float|
-|customs|JSON|
-|applied_filters|JSON|
+|_cq_id (PK)|`uuid`|
+|_cq_parent_id|`uuid`|
+|params|`json`|
+|chart|`json`|
+|avg_sdur|`float64`|
+|customs|`json`|
+|applied_filters|`json`|
