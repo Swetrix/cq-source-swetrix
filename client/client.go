@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/cloudquery/plugin-sdk/schema"
+	"github.com/cloudquery/plugin-sdk/v4/schema"
 	"github.com/rs/zerolog"
 	"github.com/swetrix/cq-source-swetrix/rest"
 )
